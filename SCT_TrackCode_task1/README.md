@@ -1,26 +1,44 @@
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn import metrics
+# 🏠 House Price Prediction using Linear Regression
 
-# Load dataset
-df = pd.read_csv('dataset.csv')
+## 📌 Overview
+This project implements a **Linear Regression model** to predict house prices based on key features such as:
+- Square Footage
+- Number of Bedrooms
+- Number of Bathrooms
 
-# Features & target
-X = df[['square_footage', 'bedrooms', 'bathrooms']]
-y = df['price']
+It demonstrates a fundamental supervised learning approach for regression problems.
 
-# Split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+---
 
-# Model
-model = LinearRegression()
-model.fit(X_train, y_train)
+## 🎯 Objective
+To build a predictive model that estimates house prices with high accuracy using structured numerical data.
 
-# Prediction
-y_pred = model.predict(X_test)
+---
 
-# Evaluation
-print("MAE:", metrics.mean_absolute_error(y_test, y_pred))
-print("MSE:", metrics.mean_squared_error(y_test, y_pred))
-print("R2 Score:", metrics.r2_score(y_test, y_pred))
+## 🧠 Model Used
+- Linear Regression (from Scikit-learn)
+
+---
+
+## 📊 Dataset Requirements
+The dataset must contain the following columns:
+- `square_footage`
+- `bedrooms`
+- `bathrooms`
+- `price` (target variable)
+
+---
+
+## ⚙️ Workflow
+1. Load dataset using Pandas  
+2. Select relevant features  
+3. Split into training and testing sets  
+4. Train Linear Regression model  
+5. Evaluate using MAE, MSE, and R² Score  
+
+---
+
+## 🚀 How to Run
+```bash
+pip install pandas scikit-learn
+python house_price_regression.py
