@@ -1,0 +1,6 @@
+Epoch 1, Loss: 0.43296150863170624
+Epoch 2, Loss: 0.004110613437660504
+Epoch 3, Loss: 3.4868519236397333e-06
+Epoch 4, Loss: 0.0
+Epoch 5, Loss: 0.0
+Model saved as gesture_model.pth
